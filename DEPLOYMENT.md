@@ -1,17 +1,17 @@
 # Deployment Information
 
-> **CHƯA DEPLOY.** Cần tài khoản Railway/Render của bạn. Điền URL và key sau khi deploy, rồi chụp 3 ảnh trong `screenshots/`.
+> Đã deploy lên Railway. `/health` trả `{"status":"ok"}`. Còn lại: chụp 3 ảnh trong `screenshots/`.
 
 ## Public URL
-`https://<điền-sau-khi-deploy>` (Railway hoặc Render)
+https://k5-l3-day14nguyentuanbach-2a202603596-deploymen-production.up.railway.app
 
 ## Platform
-Railway (`06-lab-complete/railway.toml`) hoặc Render (`06-lab-complete/render.yaml`). Cả hai đã viết sẵn và qua kiểm tra của `check_production_ready.py`.
+Railway (Root Directory `/06-lab-complete`, cấu hình trong `06-lab-complete/railway.toml`).
 
 ## Test Commands
 
 ```bash
-BASE=https://<url>
+BASE=https://k5-l3-day14nguyentuanbach-2a202603596-deploymen-production.up.railway.app
 curl -sS -o /dev/null -w '%{http_code}\n' "$BASE/health"     # 200
 curl -sS -o /dev/null -w '%{http_code}\n' "$BASE/ready"      # 200 (cần REDIS_URL trỏ tới Redis đang chạy)
 curl -sS -o /dev/null -w '%{http_code}\n' -X POST "$BASE/ask" -H 'Content-Type: application/json' -d '{"question":"Hello"}'   # 401
