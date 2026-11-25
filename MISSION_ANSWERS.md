@@ -74,7 +74,7 @@ HTTP/1.1 200 OK
 ## Part 3: Cloud Deployment
 
 ### Exercise 3.1/3.2
-- URL: **CẦN DEPLOY** (xem `DEPLOYMENT.md`)
+- URL: https://k5-l3-day14nguyentuanbach-2a202603596-deploymen-production.up.railway.app (Railway, xem `DEPLOYMENT.md`)
 - Ảnh: `screenshots/dashboard.png`, `running.png`, `test.png`
 - So sánh: `railway.toml` khai báo `builder = "DOCKERFILE"` và `healthcheckPath` ngay trong repo, Railway tự cấp domain và biến `PORT`. `render.yaml` là Blueprint khai báo nhiều service cùng lúc, secret dùng `generateValue: true` hoặc `sync: false`, Redis phải tự khai báo.
 
